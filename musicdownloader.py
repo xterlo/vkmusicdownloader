@@ -37,9 +37,7 @@ while True:
     else:
         print("Ошибка")
 vk_audio = audio.VkAudio(vk_session)
-global_start_time = time.time()
 audiocount=0
-
 filepath=input('Введите путь сохранения файлов:')
 
 i = vk_audio.get(owner_id=user_id)
