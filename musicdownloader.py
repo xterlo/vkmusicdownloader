@@ -16,7 +16,7 @@ def captcha_handler(captcha):
     return captcha.try_again(key)
 while True:
     login=input("Введите логин: ")
-    password=input('Введите пароль: ')
+    password=getpass.getpass('Введите пароль: ')
     vk_session = vk_api.VkApi(login=login, password=password,auth_handler=auth_handler,captcha_handler=captcha_handler)
     try:
         vk_session.auth()
